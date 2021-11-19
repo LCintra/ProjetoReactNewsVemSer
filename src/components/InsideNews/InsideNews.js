@@ -1,11 +1,53 @@
-import React from 'react'
-import styles from './InsideNews.module.css'
+import React from "react";
+import styles from "./InsideNews.module.css";
+import testImage from "../../images/testimage.jpg";
+import { NewsListContext } from "../../context/NewsListContext";
+import { useContext } from "react";
 
 export default function InsideNews() {
+  const { clickedInformation } = useContext(NewsListContext);
   return (
     <article className={styles.newsArticle}>
-      <img />
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, quia minus voluptatem totam placeat accusamus natus dolore eligendi perferendis iure repellat sit nam voluptas cum mollitia atque architecto. Quod, itaque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum porro laboriosam laudantium quia explicabo, quam eligendi sed optio repudiandae, est doloribus modi quos nam rem necessitatibus odio distinctio! Delectus, doloribus.</p>
+      <div className={`container ${styles.newsContainer}`}>
+        <div className={styles.firstContentContainer}>
+          <h1 className={styles.newsTitle}>{clickedInformation.title}</h1>
+          <span>{clickedInformation.author}</span>
+          <p>{clickedInformation.description}</p>
+        </div>
+        <div className={styles.bottomDiv}>
+          <img className={styles.newsImage} src={clickedInformation.imageUrl} />
+          <p className={styles.newsContent}>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Voluptatibus aut, consequatur quod saepe mollitia animi, libero
+            inventore quam nesciunt labore porro est doloribus, dolores numquam.
+            Quisquam sunt quos quam error. Lorem ipsum dolor sit, amet
+            consectetur adipisicing elit. Blanditiis libero harum, unde officia,
+            cupiditate temporibus voluptatibus rem delectus non necessitatibus
+            autem suscipit! Adipisci, velit ipsum laborum at explicabo
+            reiciendis expedita!
+          </p>
+          <p className={styles.newsContent}>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Voluptatibus aut, consequatur quod saepe mollitia animi, libero
+            inventore quam nesciunt labore porro est doloribus, dolores numquam.
+            Quisquam sunt quos quam error. Lorem ipsum dolor sit, amet
+            consectetur adipisicing elit. Blanditiis libero harum, unde officia,
+            cupiditate temporibus voluptatibus rem delectus non necessitatibus
+            autem suscipit! Adipisci, velit ipsum laborum at explicabo
+            reiciendis expedita!
+          </p>
+          <p className={styles.newsContent}>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Voluptatibus aut, consequatur quod saepe mollitia animi, libero
+            inventore quam nesciunt labore porro est doloribus, dolores numquam.
+            Quisquam sunt quos quam error. Lorem ipsum dolor sit, amet
+            consectetur adipisicing elit. Blanditiis libero harum, unde officia,
+            cupiditate temporibus voluptatibus rem delectus non necessitatibus
+            autem suscipit! Adipisci, velit ipsum laborum at explicabo
+            reiciendis expedita!
+          </p>
+        </div>
+      </div>
     </article>
-  )
+  );
 }

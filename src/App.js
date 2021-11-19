@@ -13,6 +13,7 @@ import {
   Link
 } from 'react-router-dom'
 import {NewsListProvider} from './context/NewsListContext';
+import InsideNews from './components/InsideNews/InsideNews';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
               <Route path="/saude" element={<Saude/>}></Route>
               <Route path="/mundo" element={<Mundo/>}></Route>
               <Route path="/ciencia" element={<Ciencia/>}></Route>
+              <Route path="/noticia" element={<InsideNews/>}></Route>
           </Routes>
         </Router>
       </NewsListProvider>

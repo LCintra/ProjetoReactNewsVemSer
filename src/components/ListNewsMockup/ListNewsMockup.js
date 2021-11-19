@@ -5,7 +5,6 @@ import {useState, useEffect, useContext} from "react"
 import { apiKey, axiosPath } from '../../api'
 import { NewsListContext } from '../../context/NewsListContext'
 import imageDefault from '../../images/news-default.jpeg'
-import { useRef } from 'react'
 import loadingImg from '../../images/loading.gif'
 
 export default function ListNewsMockup({type}) {
