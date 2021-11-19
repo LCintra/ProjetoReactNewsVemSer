@@ -4,13 +4,12 @@ import { useContext } from 'react'
 import { useEffect } from 'react/cjs/react.development'
 
 export default function Saude(){
-  const {setCategory,setLoading,setNewsList} = useContext(NewsListContext)
+  const {setLoading,setNewsList} = useContext(NewsListContext)
   useEffect(()=>{
-    setCategory('health')
     setLoading(true)
     setNewsList([])
   },[])
   return(
-    <ListNewsMockup/>
+    <ListNewsMockup type={'health'}/>
   )
 }
