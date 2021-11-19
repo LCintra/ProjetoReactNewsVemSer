@@ -1,24 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header/Header';
+import Home from './pages/Home';
+import Politica from './pages/Politica';
+import Mundo from './pages/Mundo'
+import Saude from './pages/Saude'
+import Ciencia from './pages/Ciencia'
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from 'react-router-dom'
+import {NewsListProvider} from './context/NewsListContext';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NewsListProvider>
+        <Router>
+          <Header/>
+          <Routes>
+              <Route path="/" element={<Home/>}></Route>
+              <Route path="/politica" element={<Politica/>}></Route>
+              <Route path="/saude" element={<Saude/>}></Route>
+              <Route path="/mundo" element={<Mundo/>}></Route>
+              <Route path="/ciencia" element={<Ciencia/>}></Route>
+          </Routes>
+        </Router>
+      </NewsListProvider>
+    </>
   );
 }
 

@@ -1,0 +1,31 @@
+.listItem{
+  display: flex;
+  margin:0 auto;
+  width: 70%;
+  padding-bottom:15px;
+}
+
+.listItem img{
+  width: 400px;
+  height:200px;
+  padding-right:10px;
+}
+
+.listItem h3{
+  font-weight: bold;
+}
+
+.listItem h4{
+  font-weight: normal;
+  font-size: 15px;
+  padding:5px 0;
+  color:gray
+}
+
+.listItem span{
+  color:gold
+}
+
+.listItem p{
+  color:gray;
+}

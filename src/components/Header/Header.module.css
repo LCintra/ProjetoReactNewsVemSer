@@ -1,0 +1,27 @@
+.headerNav{
+  background-color:#191919;
+}
+.headerNav .navContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.headerNav .leftDiv{
+  display: flex;
+  align-items: center;
+}
+.headerNav h1{
+  color:white
+}
+.headerNav img{
+  width: 100px;
+}
+.headerNav ul{
+  display: flex;
+  padding-right:25px;
+}
+.headerNav li{
+  list-style: none;
+  color:white;
+  margin-left:25px;
+}

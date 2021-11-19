@@ -1,0 +1,16 @@
+.mainBody ul{
+  padding-top:20px;
+}
+
+.mainBody h2{
+  text-align: center;
+  padding-top:20px;
+  text-transform: uppercase;
+}
+
+.loadingImg{
+  margin:0 auto;
+  display: block;
+  margin-top:20px;
+  width: 50px;
+}
